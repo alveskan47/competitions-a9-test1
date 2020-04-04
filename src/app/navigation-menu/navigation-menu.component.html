@@ -1,10 +1,15 @@
-<mat-toolbar color="primary">
-  <mat-toolbar-row>
-    <span class="example-spacer"></span>
-    <div class="navigation-menu-content">
-      <button mat-raised-button>Home</button>
-      <button mat-raised-button>Competition List</button>
-      <button mat-raised-button>Test Page</button>
-    </div>
-  </mat-toolbar-row>
-</mat-toolbar>
+<div [class.alternative]="otherTheme">
+  <mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <span class="example-spacer"></span>
+      <div class="navigation-menu-content">
+        <button mat-raised-button>Home</button>
+        <button mat-raised-button>Competition List</button>
+        <button mat-raised-button>Test Page</button>
+
+        <button mat-raised-button color="accent" (click)="changeTheme()">Swap Theme</button>
+      </div>
+    </mat-toolbar-row>
+  </mat-toolbar>
+</div>
+
