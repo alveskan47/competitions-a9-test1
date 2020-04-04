@@ -7,6 +7,7 @@ import { NavigationMenuComponent } from './navigation-menu/navigation-menu.compo
 
 import { MatButtonModule } from '@angular/material/button';
 import { MatMenuModule } from '@angular/material/menu';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { MatMenuModule } from '@angular/material/menu';
     BrowserModule,
     BrowserAnimationsModule,
     MatButtonModule,
-    MatMenuModule
+    MatMenuModule,
+    MatToolbarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
