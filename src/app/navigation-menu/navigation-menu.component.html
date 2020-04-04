@@ -3,9 +3,10 @@
     <mat-toolbar-row>
       <span class="example-spacer"></span>
       <div class="navigation-menu-content">
-        <button mat-raised-button>Home</button>
-        <button mat-raised-button>Competition List</button>
-        <button mat-raised-button>Test Page</button>
+
+        <a [routerLink]="['/']"><button mat-raised-button>Home</button></a>
+        <a [routerLink]="['/competition-list']"><button mat-raised-button>Competition List</button></a>
+        <a [routerLink]="['/test-page']"><button mat-raised-button>Test Page</button></a>
 
         <button mat-raised-button color="accent" (click)="changeTheme()">Swap Theme</button>
       </div>
