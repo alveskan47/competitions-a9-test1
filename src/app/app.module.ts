@@ -11,6 +11,9 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatToolbarModule } from '@angular/material/toolbar';
 
+import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatTableModule} from '@angular/material/table';
+
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { CompetitionListComponent } from './competition-list/competition-list.component';
 import { TestPageComponent } from './test-page/test-page.component';
@@ -30,6 +33,8 @@ import { TestPageComponent } from './test-page/test-page.component';
     MatButtonModule,
     MatMenuModule,
     MatToolbarModule,
+    MatPaginatorModule,
+    MatTableModule,
     RouterModule.forRoot([
       { path: '', component: LandingPageComponent },
       { path: 'competition-list', component: CompetitionListComponent },
