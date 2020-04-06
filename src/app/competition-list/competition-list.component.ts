@@ -30,7 +30,7 @@ export interface CompetitionInterface {
   position: number;
   distance: number;
   date: string;
-  description ?: string;
+  description?: string;
 }
 
 const ELEMENT_DATA: CompetitionInterface[] = competitions;
