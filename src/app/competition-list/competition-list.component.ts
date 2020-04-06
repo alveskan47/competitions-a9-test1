@@ -15,7 +15,7 @@ export class CompetitionListComponent implements OnInit {
   constructor() { }
 
   displayedColumns: string[] = ['position', 'name', 'distance', 'date', 'details'];
-  dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
+  dataSource = new MatTableDataSource<CompetitionInterface>(ELEMENT_DATA);
 
   @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
 
@@ -25,11 +25,12 @@ export class CompetitionListComponent implements OnInit {
 
 }
 
-export interface PeriodicElement {
+export interface CompetitionInterface {
   name: string;
   position: number;
   distance: number;
   date: string;
+  description ?: string;
 }
 
-const ELEMENT_DATA: PeriodicElement[] = competitions;
+const ELEMENT_DATA: CompetitionInterface[] = competitions;

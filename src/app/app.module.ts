@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -25,10 +26,12 @@ import { CompetitionDetailsComponent } from './competition-details/competition-d
     NavigationMenuComponent,
     CompetitionListComponent,
     LandingPageComponent,
-    TestPageComponent
+    TestPageComponent,
+    CompetitionDetailsComponent
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     BrowserAnimationsModule,
     MatButtonModule,
     MatMenuModule,

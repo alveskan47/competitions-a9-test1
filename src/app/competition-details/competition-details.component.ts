@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 import { competitions } from '../competitions';
+import { CompetitionInterface } from '../competition-list/competition-list.component';
 
 @Component({
   selector: 'app-competition-details',
@@ -9,7 +10,7 @@ import { competitions } from '../competitions';
   styleUrls: ['./competition-details.component.css']
 })
 export class CompetitionDetailsComponent implements OnInit {
-  competition;
+  competition: CompetitionInterface;
 
   constructor(
     private route: ActivatedRoute

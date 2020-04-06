@@ -6,3 +6,9 @@
 <h3>Competition: {{ competition.name }}</h3>
 <h3>Distance: {{ competition.distance }}</h3>
 <h3>Description: {{ competition.description }}</h3>
+
+<div>
+  <label>Description edit:
+    <input [(ngModel)]="competition.description"/>
+  </label>
+</div>
