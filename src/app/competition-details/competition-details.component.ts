@@ -7,7 +7,7 @@ import { CompetitionInterface } from '../competition-list/competition-list.compo
 @Component({
   selector: 'app-competition-details',
   templateUrl: './competition-details.component.html',
-  styleUrls: ['./competition-details.component.css']
+  styleUrls: ['./competition-details.component.scss']
 })
 export class CompetitionDetailsComponent implements OnInit {
   competition: CompetitionInterface;
