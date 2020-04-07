@@ -1,1 +1,8 @@
-<p>test-page works!</p>
+<p>test start</p>
+
+<ul>
+  <li *ngFor="let user of allUsers">
+    {{user.id}} {{ user.firstName }}   {{user.lastName}}   {{user.email}}
+  </li>
+</ul>
+<p>test end</p>

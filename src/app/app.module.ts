@@ -19,6 +19,8 @@ import { CompetitionListComponent } from './competition-list/competition-list.co
 import { TestPageComponent } from './test-page/test-page.component';
 import { CompetitionDetailsComponent } from './competition-details/competition-details.component';
 
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -38,6 +40,7 @@ import { CompetitionDetailsComponent } from './competition-details/competition-d
     MatToolbarModule,
     MatPaginatorModule,
     MatTableModule,
+    HttpClientModule,
     RouterModule.forRoot([
       { path: '', component: LandingPageComponent },
       { path: 'competition-list', component: CompetitionListComponent },
