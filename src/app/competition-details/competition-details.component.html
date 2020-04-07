@@ -1,15 +1,15 @@
 
 <h2>Competition Details</h2>
 
-<h3>Position: {{ competition.position }}</h3>
+<h3>Position: {{ currentCompetition.position }}</h3>
 
-<h3>Competition: {{ competition.name }}</h3>
-<h3>Distance: {{ competition.distance }}</h3>
-<h3>Description: {{ competition.description }}</h3>
+<h3>Competition: {{ currentCompetition.name }}</h3>
+<h3>Distance: {{ currentCompetition.distance }}</h3>
+<h3>Description: {{ currentCompetition.description }}</h3>
 
 <div>
   <label>Description edit:
-    <input [(ngModel)]="competition.description"/>
+    <input [(ngModel)]="currentCompetition.description"/>
   </label>
 </div>
 

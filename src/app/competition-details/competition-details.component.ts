@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 
 import { Competition } from '../competition';
 import { COMPETITIONS } from '../mock-competitions';
+import { CompetitionService } from '../competition.service';
 
 @Component({
   selector: 'app-competition-details',
@@ -12,33 +13,40 @@ import { COMPETITIONS } from '../mock-competitions';
 
 export class CompetitionDetailsComponent implements OnInit {
 
-  competition: Competition;
+  competitions: Competition[];
+  currentCompetition: Competition;
   initialValue: string;
 
   constructor(
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private competitionService: CompetitionService
   ) { }
+
+  getCompetitions(): void {
+    this.competitionService.getCompetitions()
+      .subscribe(competitions => this.competitions = competitions);
+  }
 
   saveDescription(): void {
     // to update
-    console.log('save:', this.competition.description);
+    console.log('save:', this.currentCompetition.description);
   }
 
   resetDescription(): void {
-    this.competition.description = this.initialValue;
+    this.currentCompetition.description = this.initialValue;
   }
 
   deleteDescription(): void {
-    this.competition.description = '';
+    this.currentCompetition.description = '';
   }
 
   ngOnInit() {
-
+    this.getCompetitions();
     this.route.paramMap.subscribe(params => {
-      this.competition = COMPETITIONS[+params.get('competitionId') - 1];
+      this.currentCompetition = COMPETITIONS[+params.get('competitionId') - 1];
     });
 
-    this.initialValue = this.competition.description;
+    this.initialValue = this.currentCompetition.description;
   }
 
   ngOnDestroy() {

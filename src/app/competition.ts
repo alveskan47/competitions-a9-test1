@@ -3,5 +3,5 @@ export interface Competition {
   position: number;
   distance: number;
   date: string;
-  description?: string;
+  description: string;
 }

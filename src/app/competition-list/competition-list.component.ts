@@ -4,6 +4,7 @@ import {MatTableDataSource} from '@angular/material/table';
 
 import { Competition } from '../competition';
 import { COMPETITIONS } from '../mock-competitions';
+import { CompetitionService } from '../competition.service';
 
 @Component({
   selector: 'app-competition-list',
@@ -13,14 +14,21 @@ import { COMPETITIONS } from '../mock-competitions';
 
 export class CompetitionListComponent implements OnInit {
 
-  constructor() { }
+  constructor(private competitionService: CompetitionService) {}
 
+  competitions: Competition[];
   displayedColumns: string[] = ['position', 'name', 'distance', 'date', 'details'];
   dataSource = new MatTableDataSource<Competition>(COMPETITIONS);
+
+  getCompetitions(): void {
+    this.competitionService.getCompetitions()
+      .subscribe(competitions => this.competitions = competitions);
+  }
 
   @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
 
   ngOnInit() {
+    this.getCompetitions();
     this.dataSource.paginator = this.paginator;
   }
 
